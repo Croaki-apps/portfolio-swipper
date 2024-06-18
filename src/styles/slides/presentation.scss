@@ -1,0 +1,38 @@
+.slide-presentation {
+    .slide-content {
+        justify-content: center;
+    }
+
+    .content {
+        margin-left: 50px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+
+        .icon-simple {
+            display: inline-flex;
+            margin: auto 10px -3px 0;
+        }
+
+        .age {
+            font-size: 22px;
+        }
+
+        .lastname {
+            font-size: 35px;
+            color: var(--text-color-primary);
+            font-weight: 900;
+        }
+
+        .job-title {
+            font-size: 18px;
+            background-color: var(--light-blue);
+            padding: 12px;
+            border-top-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+
+}

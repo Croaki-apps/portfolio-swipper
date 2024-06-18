@@ -7,7 +7,6 @@
         display: flex;
         flex-wrap: wrap;
         width: 50vw;
-        margin-right: auto;
         margin-top: 25px;
 
         .tool {
@@ -26,7 +25,6 @@
     }
 
     .project-presentation {
-        margin-left: auto;
         display: flex;
         flex-direction: column;
 
@@ -37,11 +35,32 @@
             border-radius: 20px;
             margin-top: 25px;
             padding: 10px 25px;
-            text-align: right;
+            text-align: center;
 
             &:hover {
                 background-color: blue;
             }
+        }
+    }
+
+    @include breakpoint(xl) {
+        .tools-presentation {
+
+            margin-right: auto;
+
+
+        }
+
+        .project-presentation {
+            margin-left: auto;
+
+            a {
+
+                text-align: right;
+
+
+            }
+
         }
     }
 }

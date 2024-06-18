@@ -65,7 +65,7 @@ export default function Contact() {
         </div>
 
         <div className="title_container">
-          <h1>
+          <h2>
             Contact
             <Image
               src={"/contact.svg"}
@@ -78,7 +78,7 @@ export default function Contact() {
                 transform: "translateY(7px)",
               }}
             />
-          </h1>
+          </h2>
         </div>
 
         <div className="coordinates-presentation">

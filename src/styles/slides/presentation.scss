@@ -1,38 +1,94 @@
 .slide-presentation {
     .slide-content {
         justify-content: center;
-    }
-
-    .content {
-        margin-left: 50px;
-        gap: 16px;
-        display: flex;
         flex-direction: column;
 
-        .icon-simple {
-            display: inline-flex;
-            margin: auto 10px -3px 0;
+        .profile-image {
+            width: 200px;
+            height: auto;
+
         }
 
-        .age {
-            font-size: 22px;
+        .title_container {
+            flex-direction: column-reverse !important;
+            margin-top: 25px;
+
+            h1 {
+                margin-bottom: 25px;
+            }
+
+
         }
 
-        .lastname {
-            font-size: 35px;
-            color: var(--text-color-primary);
-            font-weight: 900;
+        .content {
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+
+            .icon-simple {
+                display: inline-flex;
+                margin: auto 10px -3px 0;
+            }
+
+            .age {
+                font-size: 22px;
+            }
+
+            .lastname {
+                font-size: 25px;
+                color: var(--text-color-primary);
+                font-weight: 900;
+                display: none;
+
+            }
+
+            .job-title {
+                font-size: 18px;
+                background-color: var(--light-blue);
+                padding: 12px;
+                border-top-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include breakpoint(sm) {
+        .slide-content {
+            .title_container {
+                flex-direction: row-reverse !important;
+                gap: 12px;
+            }
+
         }
 
-        .job-title {
-            font-size: 18px;
-            background-color: var(--light-blue);
-            padding: 12px;
-            border-top-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            text-align: center;
-            font-weight: bold;
+    }
+
+    @include breakpoint(xl) {
+        .slide-content {
+            flex-direction: row;
+
+            .profile-image {
+                width: 400px;
+                height: 600px;
+                margin-top: 0;
+            }
+
+            .title_container {
+                flex-direction: row-reverse !important;
+            }
+
+            .content {
+                margin-left: 50px;
+
+                .lastname {
+                    font-size: 35px;
+                    display: block;
+                }
+            }
         }
+
     }
 
 }

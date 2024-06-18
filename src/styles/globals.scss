@@ -1,15 +1,21 @@
 @import '@/styles/fonts.scss';
 @import '@/styles/colors.scss';
+@import '@/styles/breakpoints.scss';
 
+// Packages
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+// Pages
 @import '@/styles/home.scss';
+
+// Components
 @import '@/styles/slides/presentation.scss';
 @import '@/styles/slides/expertise.scss';
 @import '@/styles/slides/tools.scss';
 @import '@/styles/slides/contact.scss';
 
-// Packages
-@import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css';
+
 
 * {
     box-sizing: border-box;

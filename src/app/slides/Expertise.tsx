@@ -64,7 +64,7 @@ export default function Expertise() {
             height={120}
           />
         </div>
-        <div className="tech_text_container container-blue">
+        <div className="tech_text_container">
           <b>NextJs - React - Typescript</b>
         </div>
       </section>

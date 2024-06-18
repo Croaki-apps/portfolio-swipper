@@ -5,13 +5,13 @@
 
 
     .slide_container {
-        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         overflow: hidden;
         z-index: 2;
+        height: 100%;
     }
 
     .circle {
@@ -46,15 +46,16 @@
 
     }
 
-    h1 {
-        font-size: 60px;
+    h1,
+    h2 {
+        font-size: 30px;
         color: var(--text-color-primary);
         font-weight: 900;
     }
 
 
     .slide-content {
-        padding: 0 10vw;
+        padding: 5vh 5vw;
         position: relative;
         z-index: 3;
         display: flex;
@@ -63,40 +64,71 @@
 
         .title_container {
             display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            width: 100%;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            width: 100%;
 
+            .qr-code-image {
+                background-color: white;
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    margin: auto;
+
+                    width: 80px;
+                    height: 80px;
+                }
+            }
 
         }
     }
 
+    @include breakpoint(sm) {
+
+        .slide-content {
+            padding: 5vh 15vw;
 
 
 
+        }
 
-    .container-blue {
-        background-color: var(--lighter-blue);
-        padding: 25px;
-        border-radius: 12px;
-        border: 2px solid var(--light-blue);
+
     }
 
-    .qr-code-image {
-        background-color: white;
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @include breakpoint(xl) {
+        .slide_container {
+            height: 100vh;
+        }
 
-        img {
-            margin: auto;
+        .slide-content {
+            padding: 0 10vw;
 
-            width: 100px;
-            height: 100px;
+            .title_container {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                .qr-code-image {
+                    width: 150px;
+                    height: 150px;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+
+        }
+
+        h1,
+        h2 {
+            font-size: 60px;
         }
     }
 }

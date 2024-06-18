@@ -46,7 +46,7 @@ export default function Tools() {
         </div>
 
         <div className="title_container">
-          <h1>
+          <h2>
             Projets{" "}
             <Image
               src={"/link.svg"}
@@ -59,7 +59,7 @@ export default function Tools() {
                 transform: "translateY(15px)",
               }}
             />
-          </h1>
+          </h2>
         </div>
         <div className="project-presentation">
           <a href="https://netflix-comedy.vercel.app" target="_blank">

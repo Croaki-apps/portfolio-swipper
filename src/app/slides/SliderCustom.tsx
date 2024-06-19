@@ -5,6 +5,7 @@ import Presentation from "./Presentation";
 import Expertise from "./Expertise";
 import Tools from "./Tools";
 import Contact from "./Contact";
+import { NextArrow, PrevArrow } from "../Arrows";
 
 export default function SliderCustom() {
   const settings = {
@@ -13,7 +14,9 @@ export default function SliderCustom() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrow: true,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
   return (
     <Slider {...settings}>

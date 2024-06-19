@@ -1,6 +1,19 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Contact() {
+  const [copySuccess, setCopySuccess] = useState<string>("");
+
+  const copyToClipboard = async ({ text }: { text: string }) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopySuccess("Texte copié !");
+    } catch (err) {
+      setCopySuccess("Échec de la copie du texte.");
+    }
+  };
+
   return (
     <div className="slide-contact slide_container">
       <div className="circle circle-top-left"></div>
@@ -83,7 +96,7 @@ export default function Contact() {
 
         <div className="coordinates-presentation">
           <p>
-            Parce qu&apos;un échange vaut milles mots, <br />
+            Parce qu&apos;un échange vaut milles mot, <br />
             vous pouvez aussi me contacter par téléphone ou par mail:
             <br />
           </p>
@@ -91,10 +104,24 @@ export default function Contact() {
             07 81 19 74 38{" "}
             <Image src={"/Phone.svg"} alt="Téléphone" width={20} height={20} />
           </p>
-          <p className="coordinates-item">
+          <p
+            className="coordinates-item"
+            title={"Copier"}
+            onClick={() =>
+              copyToClipboard({ text: "jordan.philippot.pro@gmail.com" })
+            }
+          >
+            <Image
+              src={"/Copy.svg"}
+              alt="Copy"
+              width={20}
+              height={20}
+              style={{ marginRight: "5px" }}
+            />
             jordan.philippot.pro@gmail.com
             <Image src={"/Mail.svg"} alt="Téléphone" width={20} height={20} />
           </p>
+          <span> {copySuccess && copySuccess}</span>
           <div className="download-file_container"></div>
         </div>
       </section>

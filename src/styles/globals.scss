@@ -14,6 +14,7 @@
 @import '@/styles/slides/expertise.scss';
 @import '@/styles/slides/tools.scss';
 @import '@/styles/slides/contact.scss';
+@import '@/styles/arrows.scss';
 
 
 
@@ -36,25 +37,4 @@ body {
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
-}
-
-.slick-dots {
-    position: absolute;
-    bottom: 30px !important;
-
-    ul {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-
-        li {
-
-            background-color: rgb(170, 170, 170);
-
-        }
-
-        .slick-active {
-            background-color: rgb(32, 32, 32);
-        }
-    }
 }

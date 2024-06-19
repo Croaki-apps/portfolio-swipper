@@ -89,6 +89,28 @@
         }
     }
 
+
+    .slick-dots {
+        position: absolute;
+        bottom: 30px !important;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+
+            li {
+
+                background-color: rgb(170, 170, 170);
+
+            }
+
+            .slick-active {
+                background-color: rgb(32, 32, 32);
+            }
+        }
+    }
+
     @include breakpoint(sm) {
 
         .slide-content {
@@ -120,6 +142,7 @@
                     img {
                         width: 100px;
                         height: 100px;
+                        background-color: #292929;
                     }
                 }
             }
@@ -131,4 +154,5 @@
             font-size: 60px;
         }
     }
+
 }

@@ -43,27 +43,37 @@
             margin-left: auto;
             margin-top: 25px;
             background-color: var(--lighter-blue);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: var(--box-shadow);
+            border-radius: 20px;
+            padding: 12px 15px;
             text-align: right;
+            box-shadow: var(--box-shadow);
 
             .coordinates-item {
-                background-color: var(--white);
-                border: 2px solid var(--light-blue);
+                background-color: white;
                 margin-top: 15px;
                 width: fit-content;
                 margin-left: auto;
                 color: black;
-                border-radius: 12px;
-                padding: 5px 15px;
+                border-radius: 20px;
+                padding: 12px 15px;
                 display: flex;
+
+                button {
+                    background: none;
+                    outline: none;
+                    border: none;
+                }
 
                 img {
                     display: inline;
                     margin-left: 10px;
                 }
             }
+        }
+
+        span {
+            font-size: 12px;
+            margin-right: 10px;
         }
     }
 
